@@ -7,3 +7,5 @@ spec:
   containers:
   - name: nginx
     image: nginx
+  - name: alamalinux
+    image: alamalinux
