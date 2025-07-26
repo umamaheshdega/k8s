@@ -8,8 +8,6 @@ spec:
     image: nginx
     env:
     - name: course
-      project: expense
-      enviorment: dev
-      value: DevOps
+      value: Devops
     - name: trainer
       value: "mahesh"
