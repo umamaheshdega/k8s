@@ -1,15 +1,15 @@
 kind: Pod
 apiVersion: v1
 metadata: 
-   name: env
+  name: env
 spec:
-   containers:
-   - name: nginx
-     image: nginx
-     env:
-     - name: course
-       project: expense
-       enviorment: dev
-       value: DevOps
-     - name: trainer
-       value: "mahesh"
+  containers:
+  - name: nginx
+    image: nginx
+    env:
+    - name: course
+      project: expense
+      enviorment: dev
+      value: DevOps
+    - name: trainer
+      value: "mahesh"
