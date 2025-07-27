@@ -19,6 +19,7 @@ metadata:
   labels:
     project: expense
     enviroment: dev
+    component: backend
 
 spec:
   containers:
