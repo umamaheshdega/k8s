@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: clusterip
+  name: nginx
 spec:
   selector:
     project: expense
