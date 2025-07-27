@@ -1,0 +1,26 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx-lb
+  labels:
+    environment: dev
+    demo: alb
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-alb
+spec:
+  type: LoadBalancer 
+  selector:
+    demo: alb
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30007
