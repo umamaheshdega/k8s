@@ -1,0 +1,30 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: nginx-np
+  labels:
+    project: expense
+    environment: dev
+    demo: np
+spec:
+  containers: 
+  - name : nginx
+    image: nginx
+
+kind: Service
+apiVersion: v1
+metadata: 
+  name: nodeport
+
+spec:
+  type: NodePort
+  selector:
+    project: expense
+    environment: dev
+    demo: np
+  ports:
+    protocol: TCP
+    port: 80
+    targetPort: 80
+    nodeport: 31272
+
