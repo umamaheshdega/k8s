@@ -10,7 +10,7 @@ spec:
   containers: 
   - name : nginx
     image: nginx
-
+---
 kind: Service
 apiVersion: v1
 metadata: 
@@ -19,11 +19,10 @@ spec:
   type: NodePort
   selector:
     project: expense
-    environment: dev
     demo: np
   ports:
   - protocol: TCP
     port: 80
     targetPort: 80
-    NodePort: 30007
+    nodePort: 30080
 
