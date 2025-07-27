@@ -15,7 +15,6 @@ kind: Service
 apiVersion: v1
 metadata: 
   name: nodeport
-
 spec:
   type: NodePort
   selector:
@@ -23,7 +22,7 @@ spec:
     environment: dev
     demo: np
   ports:
-    protocol: TCP
+  - protocol: TCP
     port: 80
     targetPort: 80
     nodeport: 31272
