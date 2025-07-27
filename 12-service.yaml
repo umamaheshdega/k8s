@@ -5,26 +5,26 @@ metadata:
 spec:
   selector:
     project: expense
-    enviorment: dev
+    enviroment: dev
     component: backend
   ports:
-    - procotol: TCP
+    - protocol: TCP
       port: 80
       targetPort: 80
 
-# kind: Pod
-# apiVersion: v1
-# metadata:
-#   name: backend
-#   labels:
-#     project: expense
-#     enviroment: dev
-#     component: backend
+kind: Pod
+apiVersion: v1
+metadata:
+  name: backend
+  labels:
+    project: expense
+    enviroment: dev
+    component: backend
 
-# spec:
-#   containers:
-#   - name: nginx
-#     image: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx
 
 
   
