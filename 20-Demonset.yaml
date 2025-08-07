@@ -1,11 +1,19 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-   name: DaemonSet
-   namespace: kube-system
-   labels:
-     k8s-app: fluentd-logging
-   spec:
+  name: fluentd-elasticsearch
+  namespace: kube-system
+  labels:
+    k8s-app: fluentd-logging
+spec:
+  selector:
+    matchLabels:
+      name: fluentd-elasticsearch
+  template:
+    metadata:
+      labels:
+        name: fluentd-elasticsearch
+    spec:
       tolerations:
       # these tolerations are to have the daemonset runnable on control plane nodes
       # remove them if your control plane nodes should not run pods
