@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: DemonSet
+kind: DaemonSet
 metadata:
-   name: DemonSet
+   name: DaemonSet
    namespace: kube-system
    labels:
    k8s-app: fluentd-logging
