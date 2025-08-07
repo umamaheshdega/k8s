@@ -5,15 +5,7 @@ metadata:
    namespace: kube-system
    labels:
      k8s-app: fluentd-logging
-spec:
-  selector:
-    matchLabels:
-      name: DaemonSet
-    template:
-      metadata:
-        labels:
-          name: DaemonSet
-      spec:
+   spec:
       tolerations:
       # these tolerations are to have the daemonset runnable on control plane nodes
       # remove them if your control plane nodes should not run pods
@@ -24,7 +16,7 @@ spec:
         operator: Exists
         effect: NoSchedule
       containers:
-      - name: DaemonSet
+      - name: fluentd-elasticsearch
         image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
         resources:
           limits:
