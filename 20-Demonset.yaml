@@ -8,11 +8,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: fluentd-elasticsearch
+      name: DaemonSet
     template:
       metadata:
         labels:
-          name: fluentd-elasticsearch
+          name: DaemonSet
       spec:
       tolerations:
       # these tolerations are to have the daemonset runnable on control plane nodes
@@ -24,7 +24,7 @@ spec:
         operator: Exists
         effect: NoSchedule
     containers:
-    - name: fluentd-elasticsearch
+    - name: DaemonSet
       image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
       resources:
         limits:
