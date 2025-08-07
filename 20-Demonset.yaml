@@ -4,7 +4,7 @@ metadata:
    name: DaemonSet
    namespace: kube-system
    labels:
-   k8s-app: fluentd-logging
+     k8s-app: fluentd-logging
 spec:
   selector:
     matchLabels:
