@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: init-01
+  labels:
+    app.kubernetes.io/name: MyApp
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  initContainers:
+  - name: init-myservice
+    image: busybox:1.28
+    command: ['sh','-c', "for i in {1..10}; do sleep 10; if nslookup google.com; then exit 0; fi; done; exit 1"]
