@@ -1,7 +1,10 @@
 kind: ConfigMap
 apiVersion: v1
 metadata: 
-  name: Myconfig-k8s
-
+  name: k8sconfig
 data:
   KUBERNETES_SERVICE_PORT_HTTP: 80
+
+
+
+ 
